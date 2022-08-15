@@ -1,11 +1,19 @@
 // Scripts
+// Get User starts here
 class loadUser {
     constructor(users) {
         this.users = users;
     }
     // set category into html select box.
     loadUserIntoHtml() {
-        console.log('users', this.users)
+        let userRows = [];
+        let userRowForm = this.users.map(user => {
+            console.log('user', user.gender);
+            `<h3>${user.gender}</h3>`
+        })
+    
+        console.log('****',userRowForm);
+        //document.getElementById('user_container').innerHTML = userRows.join("");
     }
 }
 
