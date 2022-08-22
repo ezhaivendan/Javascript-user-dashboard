@@ -8,7 +8,10 @@ class loadUser {
     loadUserIntoHtml() {
         console.log('this.users', this.users)
         let userRows = [];
-        let userRowForm = this.users.map(user => `<h3>${user.gender}</h3>`)
+        let userRowForm = this.users.map(user => `<div class="user-box">
+            <img src=${user.picture.medium} />
+            <h4>${user.name.title} ${user.name.first} ${user.name.last}</h4>
+        </div>`)
     
         console.log('****',userRowForm);
         document.getElementById('user_container').innerHTML = userRowForm.join('');
