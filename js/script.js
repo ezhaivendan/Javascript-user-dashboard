@@ -4,7 +4,7 @@ class loadUser {
     constructor(users) {
         this.users = users;
     }
-    // set category into html select box.
+    
     loadUserIntoHtml() {
         console.log('this.users', this.users)
         let userRows = [];
