@@ -4,14 +4,16 @@ class loadUser {
     constructor(users) {
         this.users = users;
     }
-    
+    // set category into html select box.
     loadUserIntoHtml() {
         console.log('this.users', this.users)
         let userRows = [];
         let userRowForm = this.users.map(user => `<div class="user-box">
             <img src=${user.picture.medium} />
             <h4>${user.name.title} ${user.name.first} ${user.name.last}</h4>
+            <h5>${user.dob.age}, ${user.location.country}</h5>
         </div>`)
+    
         document.getElementById('user_container').innerHTML = userRowForm.join('');
     }
 }
