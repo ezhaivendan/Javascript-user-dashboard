@@ -1,4 +1,3 @@
-// Scripts
 async function fetchUserFromAPI() {
     let jsonRes = await fetch('https://randomuser.me/api/?results=20');
     let response = await jsonRes.json();
