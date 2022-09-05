@@ -1,5 +1,4 @@
 // Scripts
-
 async function fetchUserFromAPI() {
     let jsonRes = await fetch('https://randomuser.me/api/?results=20');
     let response = await jsonRes.json();
@@ -10,8 +9,7 @@ async function fetchUserFromAPI() {
             <img src=${user.picture.medium} />
             <div class="user_name">${user.name.title} ${user.name.first} ${user.name.last}</div>
             <div class="user_detail">${user.dob.age}, ${user.location.country}</div>
-        </div>`)
-    
+        </div>`) 
     document.getElementById('user_container').innerHTML = userRowForm.join('');
 }
 
