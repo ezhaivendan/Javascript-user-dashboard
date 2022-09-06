@@ -3,3 +3,58 @@ body, html {
     margin: 0;
     padding: 0;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    font-family: cursive;
+}
+
+h1 {
+    margin: 25px 0;
+    color: #ff5e5e;
+}
+
+div#user_container {
+    border-top: 1px solid #ddd;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    column-gap: 20px;
+    padding-left: 20px;
+    font-size: 14px;
+    /* width: 100%; */
+    /* overflow: hidden; */
+}
+
+.user-box {
+    width: calc(20% - 20px);
+    height: 222px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background: #ff5e5e;
+    color: #fff;
+}
+
+.user-box img {
+    width: 100%;
+}
+
+.user_name {
+    padding: 5px 10px 0px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user_detail {
+    padding-left: 10px;
+    font-size: 12px;
+}
