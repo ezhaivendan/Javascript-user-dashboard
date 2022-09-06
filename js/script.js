@@ -5,10 +5,11 @@ async function fetchUserFromAPI() {
     let retriveLocalUser = JSON.parse(localStorage.getItem('userArray'))
     console.log('retriveLocalUser', retriveLocalUser);
     let userRowForm = retriveLocalUser.results.map(user => `<div class="user-box">
-            <img src=${user.picture.medium} />
+            <img title="${user.name.title} ${user.name.first} ${user.name.last}" src=${user.picture.large} />
             <div class="user_name">${user.name.title} ${user.name.first} ${user.name.last}</div>
             <div class="user_detail">${user.dob.age}, ${user.location.country}</div>
-        </div>`) 
+        </div>`)
+    
     document.getElementById('user_container').innerHTML = userRowForm.join('');
 }
 
