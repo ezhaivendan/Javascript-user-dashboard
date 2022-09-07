@@ -34,12 +34,13 @@ div#user_container {
 
 .user-box {
     width: calc(20% - 20px);
-    height: 222px;
+    height: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 20px;
     background: #ff5e5e;
     color: #fff;
+    padding-bottom: 10px;
 }
 
 .user-box img {
