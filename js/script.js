@@ -1,8 +1,11 @@
+let retriveLocalUser;
 async function fetchUserFromAPI() {
+    if(!retriveLocalUser){
     let jsonRes = await fetch('https://randomuser.me/api/?results=20');
     let response = await jsonRes.json();
     localStorage.setItem('userArray', JSON.stringify(response));
-    let retriveLocalUser = JSON.parse(localStorage.getItem('userArray'))
+    retriveLocalUser = JSON.parse(localStorage.getItem('userArray'))
+    }
     console.log('retriveLocalUser', retriveLocalUser);
     let userRowForm = retriveLocalUser.results.map(user => `<div class="user-box">
             <img title="${user.name.title} ${user.name.first} ${user.name.last}" src=${user.picture.large} />
