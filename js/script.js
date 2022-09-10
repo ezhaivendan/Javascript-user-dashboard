@@ -31,6 +31,5 @@ function getUserDetails(userImg) {
         </div>`
     );
 
-    console.log("filterUser", filterUser, "userDet", userDet)
     document.getElementById('user_details').innerHTML = userDet.join('');
 }
