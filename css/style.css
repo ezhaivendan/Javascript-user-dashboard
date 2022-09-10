@@ -28,6 +28,8 @@ div#user_container {
     column-gap: 20px;
     padding-left: 20px;
     font-size: 14px;
+    /* width: 100%; */
+    /* overflow: hidden; */
 }
 
 .user-box {
@@ -56,4 +58,29 @@ div#user_container {
 .user_detail {
     padding-left: 10px;
     font-size: 12px;
+}
+
+.is-hidden {
+    display: none;
+}
+
+#user_details_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 70%);
+}
+
+#user_details {
+    position: fixed;
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -200px;
+    background: #fff;
+    z-index: 2;
 }
