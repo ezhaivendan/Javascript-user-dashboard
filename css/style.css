@@ -84,3 +84,27 @@ div#user_container {
     background: #fff;
     z-index: 2;
 }
+
+.close-icon {
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    background: #ff5e5e;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user-img {
+    width: 45%;
+}
+
+.user-img img {
+    width: 100%;
+}
