@@ -21,18 +21,56 @@ async function fetchUserFromAPI() {
 fetchUserFromAPI()
 
 function getUserDetails(userImg) {
+    console.log("user", userImg)
     document.getElementById("user_details").classList.remove("is-hidden");
     document.getElementById("user_details_overlay").classList.remove("is-hidden");
     let filterUser = retriveLocalUser.results.filter(user => user.picture.large === userImg);
     let userDet = filterUser.map(userDet => 
         `<div class="user-popup">
             <div class="close-icon" onclick="closePopup()"> <span> X </span></div>
+            <div class="user-section-row">
             <div class="user-img">
                 <img src=${userDet.picture.large} />
+            </div>
+            <div class="user-details-row">
+                <p>
+                    <label>Name : </label>
+                    <span>${userDet.name.title} ${userDet.name.first} ${userDet.name.last}</span>
+                </p>
+                <p>
+                    <label>DOB, Age : </label>
+                    <span>${userDet.dob.date}, ${userDet.dob.age}</span>
+                </p>
+                <p>
+                    <label>Gender : </label>
+                    <span>${userDet.gender}</span>
+                </p>
+                <p>
+                    <label>Address : </label>
+                    <span>${userDet.location.street.number}, ${userDet.location.street.name}
+                    ${userDet.location.city}
+                    ${userDet.location.state}
+                    ${userDet.location.country} - ${userDet.location.postcode} 
+                    </span>
+                </p>
+                <p>
+                    <label>Cell : </label>
+                    <span>${userDet.cell}</span>
+                </p>
+                <p>
+                    <label>Phone : </label>
+                    <span>${userDet.phone}</span>
+                </p>
+                <p>
+                    <label>Email : </label>
+                    <span>${userDet.email}</span>
+                </p>
+            </div>
             </div>
         </div>`
     );
 
+    console.log("filterUser", filterUser, "userDet", userDet)
     document.getElementById('user_details').innerHTML = userDet.join('');
 }
 
