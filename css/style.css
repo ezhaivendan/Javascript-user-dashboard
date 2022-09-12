@@ -108,3 +108,7 @@ div#user_container {
 .user-img img {
     width: 100%;
 }
+
+.user-section-row {
+    display: flex;
+}
