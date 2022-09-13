@@ -75,11 +75,11 @@ div#user_container {
 
 #user_details {
     position: fixed;
-    width: 600px;
+    width: 700px;
     height: 400px;
     top: 50%;
     left: 50%;
-    margin-left: -300px;
+    margin-left: -350px;
     margin-top: -200px;
     background: #fff;
     z-index: 2;
@@ -102,7 +102,9 @@ div#user_container {
 }
 
 .user-img {
-    width: 45%;
+    width: 35%;
+    height: 100%;
+    margin-right: 2.5%;
 }
 
 .user-img img {
@@ -111,4 +113,5 @@ div#user_container {
 
 .user-section-row {
     display: flex;
+    height: 100%;
 }
