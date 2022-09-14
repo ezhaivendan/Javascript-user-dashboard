@@ -21,7 +21,6 @@ async function fetchUserFromAPI() {
 fetchUserFromAPI()
 
 function getUserDetails(userImg) {
-    console.log("user", userImg)
     document.getElementById("user_details").classList.remove("is-hidden");
     document.getElementById("user_details_overlay").classList.remove("is-hidden");
     let filterUser = retriveLocalUser.results.filter(user => user.picture.large === userImg);
