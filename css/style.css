@@ -1,4 +1,4 @@
-
+/* Style */
 body, html {
     margin: 0;
     padding: 0;
@@ -53,6 +53,8 @@ div#user_container {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor: pointer;
+    text-shadow: 1px 1px #931111;
 }
 
 .user_detail {
@@ -103,8 +105,13 @@ div#user_container {
 
 .user-img {
     width: 35%;
-    height: 100%;
-    margin-right: 2.5%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #ff5e5e;
+    border: 4px solid #dd3838;
 }
 
 .user-img img {
