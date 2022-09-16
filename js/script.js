@@ -21,6 +21,7 @@ async function fetchUserFromAPI() {
 fetchUserFromAPI()
 
 function getUserDetails(userImg) {
+    console.log("user", userImg)
     document.getElementById("user_details").classList.remove("is-hidden");
     document.getElementById("user_details_overlay").classList.remove("is-hidden");
     let filterUser = retriveLocalUser.results.filter(user => user.picture.large === userImg);
@@ -37,8 +38,12 @@ function getUserDetails(userImg) {
                     <span>${userDet.name.title} ${userDet.name.first} ${userDet.name.last}</span>
                 </p>
                 <p>
-                    <label>DOB, Age : </label>
-                    <span>${userDet.dob.date}, ${userDet.dob.age}</span>
+                    <label>DOB : </label>
+                    <span>${(userDet.dob.date).slice(0, 10)}</span>
+                </p>
+                <p>
+                    <label>Age : </label>
+                    <span>${userDet.dob.age}</span>
                 </p>
                 <p>
                     <label>Gender : </label>
@@ -46,9 +51,10 @@ function getUserDetails(userImg) {
                 </p>
                 <p>
                     <label>Address : </label>
-                    <span>${userDet.location.street.number}, ${userDet.location.street.name}
-                    ${userDet.location.city}
-                    ${userDet.location.state}
+                    <span>
+                    ${userDet.location.street.number}, ${userDet.location.street.name}<br />
+                    ${userDet.location.city}<br />
+                    ${userDet.location.state}<br />
                     ${userDet.location.country} - ${userDet.location.postcode} 
                     </span>
                 </p>
