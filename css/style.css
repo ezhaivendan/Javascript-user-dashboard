@@ -54,6 +54,9 @@ div#user_container {
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
+}
+
+.user-box:hover .user_name {
     text-shadow: 1px 1px #931111;
 }
 
@@ -121,4 +124,13 @@ div#user_container {
 .user-section-row {
     display: flex;
     height: 100%;
+}
+
+.user-details-row p label {
+    font-weight: bold;
+    width: 100px;
+}
+
+.user-details-row p {
+    display: flex;
 }
