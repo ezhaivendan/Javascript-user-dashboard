@@ -8,7 +8,6 @@ async function fetchUserFromAPI() {
     localStorage.setItem('userArray', JSON.stringify(response));
     retriveLocalUser = JSON.parse(localStorage.getItem('userArray'))
     }
-    console.log('retriveLocalUser', retriveLocalUser);
     let userRowForm = retriveLocalUser.results.map(user => `<div class="user-box">
             <img title="${user.name.title} ${user.name.first} ${user.name.last}" src=${user.picture.large} />
             <div class="user_name" onclick='getUserDetails("${user.picture.large}")'>${user.name.title} ${user.name.first} ${user.name.last}</div>
@@ -21,7 +20,6 @@ async function fetchUserFromAPI() {
 fetchUserFromAPI()
 
 function getUserDetails(userImg) {
-    console.log("user", userImg)
     document.getElementById("user_details").classList.remove("is-hidden");
     document.getElementById("user_details_overlay").classList.remove("is-hidden");
     let filterUser = retriveLocalUser.results.filter(user => user.picture.large === userImg);
@@ -74,8 +72,6 @@ function getUserDetails(userImg) {
             </div>
         </div>`
     );
-
-    console.log("filterUser", filterUser, "userDet", userDet)
     document.getElementById('user_details').innerHTML = userDet.join('');
 }
 
